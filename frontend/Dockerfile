@@ -4,8 +4,6 @@ RUN rm -rf /usr/share/nginx/html/*
 RUN rm -rf /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY code /usr/share/nginx/html/
-ENV DB_HOST="backend"
-CMD ["nginx", "-g", "daemon off;"]
 # RUN mkdir -p /var/cache/nginx/client_temp && \
 #         mkdir -p /var/cache/nginx/proxy_temp && \
 #         mkdir -p /var/cache/nginx/fastcgi_temp && \
